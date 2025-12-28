@@ -1,29 +1,21 @@
-'use client';
-
-import { useState } from "react";
-
-export default function Home() {
-  const [count, setCount] = useState(0);
-
+export default function HomePage() {
   return (
-    <div className="container">
-      <div className="buttons">
-        <button
-          className="btn"
-          onClick={() => setCount(count - 1)}
-        >
-          -
-        </button>
+    <main className="min-h-screen flex flex-col items-center justify-center gap-6">
+      <h1 className="text-4xl font-bold">
+        فروشگاه و بلاگ
+      </h1>
 
-        <button
-          className="btn"
-          onClick={() => setCount(count + 1)}
-        >
-          +
-        </button>
+      <div className="flex gap-4">
+        <a href="/products" className="px-5 py-2 bg-blue-600 text-white rounded">
+          محصولات
+        </a>
+        <a href="/blog" className="px-5 py-2 bg-green-600 text-white rounded">
+          بلاگ
+        </a>
+        <a href="/admin/blog" className="px-5 py-2 bg-gray-800 text-white rounded">
+          مدیریت بلاگ
+        </a>
       </div>
-
-      <h1>عدد: {count}</h1>
-    </div>
+    </main>
   );
 }
